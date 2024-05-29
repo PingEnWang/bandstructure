@@ -17,7 +17,7 @@ def potential_matrix(H,K,L,coefficient,reciprocal_basis):
 
 
 def potential_coefficient(a,charges,parameter):
-    return -parameter*charges*constants.elementary_charge**2/(a**2*constants.pi*constants.epsilon_0)
+    return -parameter*charges*constants.elementary_charge**2/(a*constants.pi*constants.epsilon_0)
 
 @njit(parallel=True)
 def pseudomatrix_kernal(H,K,L,n):
